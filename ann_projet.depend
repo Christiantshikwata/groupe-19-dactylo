@@ -92,7 +92,7 @@
 1714245524 c:\msys64\mingw64\include\pthread_time.h
 	<sys/timeb.h>
 
-1718280922 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\main.c
+1718312633 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\main.c
 	"jeux.h"
 	"configuration.h"
 
@@ -109,4 +109,6 @@
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
+
+1717590925 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\fonction.c
 

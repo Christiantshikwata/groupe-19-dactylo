@@ -35,8 +35,11 @@ int remplissageTableau(int nbreMot)
 
     fclose(file);
 
+
     srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
-    int nombreTotaleDeMot = nbreMot; // Remplacez 10 par le nombre de mots que vous voulez
+    int nombreTotaleDeMot = nbreMot; // Remplacez 10 par le nombre de mots que vous voul
+
+
     printf("%s Vous devriez orthographier correctement ces mots; \n",j[0].nom);
     for (int i = 0; i < nombreTotaleDeMot; i++)
     {
@@ -47,7 +50,7 @@ int remplissageTableau(int nbreMot)
         scanf("%s", saisieUtilisateur);
         while (strcmp(saisieUtilisateur, words[indiceDuTableauAleatoire]) != 0)
         {
-            printf("Erreur, réessayez le mot %d\n", i+1);
+            printf("Erreur, rÃ©essayez le mot %d\n", i+1);
             scanf("%s", saisieUtilisateur);
         }
     }
@@ -61,14 +64,10 @@ int demarrageDuJeux(int nbreMot)
     printf("+++++++++++++++++++++++++++++++saisissez le nombre de mot que vous voudrez++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d",&nbreMot);
 
-    printf("saisissez le nom du joueur n°1\n\n");
+    printf("saisissez le nom du joueur nÂ°1\n\n");
     scanf("%s",j[0].nom);
-    printf("saisissez le nom du joueur n°2\n\n");
+    printf("saisissez le nom du joueur nÂ°2\n\n");
     scanf("%s",j[1].nom);
-    for (int i=0;i<2;i++)
-    {
-        remplissageTableau(nbreMot);
-    }
     return nbreMot;
 }
 int demarrageDeLapartie()
@@ -107,21 +106,46 @@ void accueilMenu()
 }
 
 float calculTemps()
-{
-    float time;
-    clock_t start_time = clock();
-    remplissageTableau();
-    clock_t current_time = clock();
-    time = (float)(current_time - start_time) / CLOCKS_PER_SEC;
-    return time;
-}
 
-void afficherCalculTemps(int i)
 {
     struct joueur j[2];
-    j[i].score=calculTemps();
-    printf("%f sec",j[i].score);
+    int nbreMot;
+    nbreMot=demarrageDuJeux(nbreMot);
+    float time;
+
+    for (int i=0; i<2; i++)
+    {
+        clock_t start_time = clock();
+        remplissageTableau(nbreMot);
+        clock_t current_time = clock();
+        time = (float)(current_time - start_time) / CLOCKS_PER_SEC;
+        j[i].score=time;
+    }
+    printf("%f sec %f",j[0].score,j[1].score);
+    if (j[0].score>j[1].score)
+    {
+        printf("%s a gagner contre %s avec %f",j[0].nom,j[1].nom,j[0].score);
+    }
+    else if(j[0].score<j[1].score)
+    {
+        printf("%s a gagner contre %s avec %f",j[1].nom,j[0].nom,j[1].score);
+    }
+    else
+    {
+        printf("%s  %s ont gagner a egalite avec %f",j[0].nom,j[1].nom,j[0].score);
+    }
+    return 1;
 }
+
+/*void afficherCalculTemps(int i)
+{
+    struct joueur j[2];
+    for (int i=0; i<2; i++)
+    {
+        j[i].score=calculTemps();
+    }
+    printf("%f sec %f",j[0].score,j[1].score);
+}*/
 
 void pageDaccueil()
 {

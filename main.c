@@ -8,7 +8,7 @@ int main()
     //ajoutDesMots();
     //remplissageTableau();
     //modeDaccesAdministrateur();
-    afficherCalculTemps();
+    calculTemps();
     //demarrageDuJeux(nbreMot);
     return 0;
 }

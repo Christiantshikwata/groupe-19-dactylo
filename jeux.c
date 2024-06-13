@@ -35,8 +35,8 @@ int remplissageTableau()
 
     fclose(file);
 
-    srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
-    int nombreTotaleDeMot = demarrageDuJeux(10); // Remplacez 10 par le nombre de mots que vous voulez
+    srand(time(NULL)); // Initialiser le gÃ©nÃ©rateur de nombres alÃ©atoires
+    int nombreTotaleDeMot = demarrageDuJeux(10); // nous initialisons le nombre totale de mot a orthographier avec ceux qui viennent du menu demarrer
     printf("%s Vous devriez orthographier correctement ces mots; \n",j[0].nom);
     for (int i = 0; i < nombreTotaleDeMot; i++)
     {
@@ -47,7 +47,7 @@ int remplissageTableau()
         scanf("%s", saisieUtilisateur);
         while (strcmp(saisieUtilisateur, words[indiceDuTableauAleatoire]) != 0)
         {
-            printf("Erreur, réessayez le mot %d\n", i+1);
+            printf("Erreur, rÃ©essayez le mot %d\n", i+1);
             scanf("%s", saisieUtilisateur);
         }
     }
@@ -61,9 +61,9 @@ int demarrageDuJeux(int nbreMot)
     printf("+++++++++++++++++++++++++++++++saisissez le nombre de mot que vous voudrez++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d",&nbreMot);
 
-    printf("saisissez le nom du joueur n°1\n\n");
+    printf("saisissez le nom du joueur nÂ°1\n\n");
     scanf("%s",j[0].nom);
-    printf("saisissez le nom du joueur n°2\n\n");
+    printf("saisissez le nom du joueur nÂ°2\n\n");
     scanf("%s",j[1].nom);
     return nbreMot;
 }

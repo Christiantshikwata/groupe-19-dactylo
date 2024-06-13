@@ -15,7 +15,7 @@ typedef struct listeDeNosMot
 };
 
 
-int remplissageTableau()
+int remplissageTableau(int nbreMot)
 {
     struct joueur j[2];
     char words[nombreMaximumDesMots][tailleMaximumDuMot];
@@ -36,7 +36,7 @@ int remplissageTableau()
     fclose(file);
 
     srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
-    int nombreTotaleDeMot = demarrageDuJeux(10); // Remplacez 10 par le nombre de mots que vous voulez
+    int nombreTotaleDeMot = nbreMot; // Remplacez 10 par le nombre de mots que vous voulez
     printf("%s Vous devriez orthographier correctement ces mots; \n",j[0].nom);
     for (int i = 0; i < nombreTotaleDeMot; i++)
     {
@@ -65,6 +65,10 @@ int demarrageDuJeux(int nbreMot)
     scanf("%s",j[0].nom);
     printf("saisissez le nom du joueur n°2\n\n");
     scanf("%s",j[1].nom);
+    for (int i=0;i<2;i++)
+    {
+        remplissageTableau(nbreMot);
+    }
     return nbreMot;
 }
 int demarrageDeLapartie()

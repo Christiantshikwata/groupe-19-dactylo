@@ -75,35 +75,6 @@ int demarrageDeLapartie()
 
 }
 
-void accueilMenu()
-{
-    //calculTemps();
-    int nbreMot;
-    enum choix des = demarrer;
-    printf("1.demarrer \n"
-           "2.configuration \n"
-           "3.aide\n");
-    scanf("%d",&des);
-    switch(des)
-    {
-    case demarrer:
-        system("cls");
-        demarrageDuJeux(nbreMot);
-        break;
-
-    case configuration :
-        system("cls");
-        modeDaccesAdministrateur();
-        break;
-    case aide:
-        system("cls");
-        informationDuJeux();
-        break;
-    default:
-        break;
-    }
-    //afficherCalculTemps();
-}
 
 float calculTemps()
 

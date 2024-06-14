@@ -3,7 +3,7 @@
 #include <time.h>
 #define nombreMaximumDesMots 500
 #define tailleMaximumDuMot 40
-enum choix {demarrer=1,configuration,aide};
+
 typedef struct joueur
 {
     char nom[50];
@@ -64,9 +64,9 @@ int demarrageDuJeux(int nbreMot)
     printf("+++++++++++++++++++++++++++++++saisissez le nombre de mot que vous voudrez++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d",&nbreMot);
 
-    printf("saisissez le nom du joueur nÂ°1\n\n");
+    printf("saisissez le nom du joueur n°1\n\n");
     scanf("%s",j[0].nom);
-    printf("saisissez le nom du joueur nÂ°2\n\n");
+    printf("saisissez le nom du joueur n°2\n\n");
     scanf("%s",j[1].nom);
     return nbreMot;
 }
@@ -118,16 +118,3 @@ float calculTemps()
     printf("%f sec %f",j[0].score,j[1].score);
 }*/
 
-void pageDaccueil()
-{
-    printf("UDBL dactylogiciel\n");
-    clock_t start_time=clock();
-    clock_t current_time=clock();
-
-    while((double)(current_time-start_time)/CLOCKS_PER_SEC < 2)
-    {
-        current_time=clock();
-
-    }
-    system("cls");
-}

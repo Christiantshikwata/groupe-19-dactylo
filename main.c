@@ -1,14 +1,15 @@
 #include "jeux.h"
 #include "configuration.h"
+#include "accueil.h"
 
 int main()
 {   int nbreMot;
-    //pageDaccueil();
+    pageDaccueil();
     //accueilMenu();
     //ajoutDesMots();
     //remplissageTableau();
     //modeDaccesAdministrateur();
-    calculTemps();
+    //calculTemps();
     //demarrageDuJeux(nbreMot);
     return 0;
 }

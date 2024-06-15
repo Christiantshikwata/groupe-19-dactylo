@@ -6,11 +6,7 @@
 #define MotDePasseAdmin 4525
 
 enum choix {demarrer=1,configuration,aide};
-typedef struct joueur
-{
-    char nom[50];
-    float score;
-};
+
 typedef struct listeDeNosMot
 {
     char mot[50];

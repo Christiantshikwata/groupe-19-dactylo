@@ -92,7 +92,7 @@
 1714245524 c:\msys64\mingw64\include\pthread_time.h
 	<sys/timeb.h>
 
-1718371215 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\main.c
+1718396554 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\main.c
 	"jeux.h"
 	"configuration.h"
 	"accueil.h"
@@ -101,12 +101,12 @@
 
 1718347909 c:\users\chris\desktop\langage c\dactylogiel groupe 19\configuration.h
 
-1718371215 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\configuration.c
+1718392322 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\configuration.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 
-1718371215 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\jeux.c
+1718396488 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\jeux.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -114,4 +114,7 @@
 1717590925 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\fonction.c
 
 1718371215 c:\users\chris\desktop\langage c\dactylogiel groupe 19\accueil.h
+
+1718392626 source:c:\users\chris\desktop\langage c\dactylogiel groupe 19\accueil.c
+	<time.h>
 

@@ -4,12 +4,13 @@
 
 int main()
 {   int nbreMot;
-    pageDaccueil();
+    //pageDaccueil();
     //accueilMenu();
     //ajoutDesMots();
-    //remplissageTableau();
+    //
     //modeDaccesAdministrateur();
-    //calculTemps();
+    calculTemps(0);
     //demarrageDuJeux(nbreMot);
+    //remplissageTableau();
     return 0;
 }

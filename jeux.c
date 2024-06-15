@@ -4,6 +4,9 @@
 #define nombreMaximumDesMots 500
 #define tailleMaximumDuMot 40
 
+
+//cette structure nous permet de recuperer le nom et score du joueur
+
 typedef struct joueur
 {
     char nom[50];
@@ -13,6 +16,9 @@ typedef struct listeDeNosMot
 {
     char mot[50];
 };
+
+
+//dans cette fonction nous remplissons un tableau avec la saisie de l'utilateur et les mots proveienne dde notre banque de mots
 
 int remplissageTableau(int nbreMot, struct joueur j[2])
 {
@@ -33,7 +39,7 @@ int remplissageTableau(int nbreMot, struct joueur j[2])
 
     fclose(file);
 
-    srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // Initialiser le gÃ©nÃ©rateur de nombres alÃ©atoires
     int nombreTotaleDeMot = nbreMot;
     int i=0;
 
@@ -66,6 +72,9 @@ int remplissageTableau(int nbreMot, struct joueur j[2])
     return 0;
 }
 
+
+// ici cette fonction nous permet de lancer notre jeu
+
 int demarrageDuJeux(int nbreMot)
 {
     struct joueur j[2];
@@ -73,15 +82,18 @@ int demarrageDuJeux(int nbreMot)
     printf("+++++++++++++++++++++++++++++++    saisissez le nombre de mot que vous voudrez       ++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d", &nbreMot);
 
-    printf("saisissez le nom du joueur n°1\n\n");
+    printf("saisissez le nom du joueur nÂ°1\n\n");
     scanf("%s", j[0].nom);
     printf("%s\n", j[0].nom);
-    printf("saisissez le nom du joueur n°2\n");
+    printf("saisissez le nom du joueur nÂ°2\n");
     scanf("%s", j[1].nom);
     printf("%s\n", j[1].nom);
     remplissageTableau(nbreMot,j);
     return nbreMot;
 }
+
+
+// dans cette fonction on calcul le temps que les joueurs vont faire et on affiche le score et le nom du gagnant
 
 float calculTemps(struct joueur j[2])
 
@@ -136,7 +148,7 @@ int remplissageTableau(int nbreMot )
     fclose(file);
 
 
-    srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // Initialiser le gÃ©nÃ©rateur de nombres alÃ©atoires
     int nombreTotaleDeMot = nbreMot; // Remplacez 10 par le nombre de mots que vous voul
 
 
@@ -157,6 +169,9 @@ int remplissageTableau(int nbreMot )
     return j[0].nom,j[1].nom;
 }
 
+
+// dans cette procedure on affiche le nom du jeu ainsi que les concepteur pendant un temps donner et on affiche ca en debut de je
+
 int demarrageDuJeux(int nbreMot,char j[0].nom,j[1].nom)
 {
     struct joueur j[2];
@@ -164,10 +179,10 @@ int demarrageDuJeux(int nbreMot,char j[0].nom,j[1].nom)
     printf("+++++++++++++++++++++++++++++++    saisissez le nombre de mot que vous voudrez       ++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d",&nbreMot);
 
-    printf("saisissez le nom du joueur n°1\n\n");
+    printf("saisissez le nom du joueur nÂ°1\n\n");
     scanf("%s",j[0].nom);
     printf("%s\n",j[0].nom);
-    printf("saisissez le nom du joueur n°2\n\n");
+    printf("saisissez le nom du joueur nÂ°2\n\n");
     scanf("%s",j[1].nom);
     remplissageTableau(nbreMot);
     return nbreMot,j[0].nom,j[1].nom;

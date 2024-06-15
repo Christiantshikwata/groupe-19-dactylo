@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <time.h>
 enum choix {demarrer=1,configuration,aide};
 void pageDaccueil()
@@ -13,7 +14,7 @@ void pageDaccueil()
     clock_t start_time=clock();
     clock_t current_time=clock();
 
-    while((double)(current_time-start_time)/CLOCKS_PER_SEC < 10)
+    while((double)(current_time-start_time)/CLOCKS_PER_SEC < 1)
     {
         current_time=clock();
 
@@ -36,7 +37,7 @@ void accueilMenu()
     {
     case demarrer:
         system("cls");
-        demarrageDuJeux(nbreMot);
+        calculTemps();
         break;
 
     case configuration :

@@ -34,19 +34,18 @@ int modeDaccesAdministrateur()
 
 //dans la procedure ajoutDesMots, elle nous permet d'ajouter des mots dans notre banque de mots
 
+void historique()
+{
+
+}
+
 void ajoutDesMots()
 {
-    int i ,int rouge;
+    int i ;
     char reponse;
     int limitesDesMotAjouter;
     struct listeDeNosMot m;
     FILE* notreBaseDeDonnee = fopen("banqueDeMot.txt","a");
-
-    if (notreBaseDeDonnee == NULL)
-    {
-        printf("Erreur d'ouverture du fichier !\n");
-        return;
-    }
 
 
     do

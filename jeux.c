@@ -16,22 +16,22 @@ int remplissageTableau(int nbreMot, struct joueur j[2])
 {
     char mots[nombreMaximumDesMots][tailleMaximumDuMot];
     int numeroDeMot = 0;
-    FILE* file = fopen("banqueDeMot.txt", "r");
+    FILE* notreBanqueDemot = fopen("banqueDeMot.txt", "r");
 
-    if (file == NULL)
+    if (notreBanqueDemot == NULL)
     {
         printf("il est impossible pour nous d'ouvrir ce fichier !\n");
         return 1;
     }
 
-    while (fscanf(file, "%s", mots[numeroDeMot]) != EOF && numeroDeMot < nombreMaximumDesMots)
+    while (fscanf(notreBanqueDemot, "%s", mots[numeroDeMot]) != EOF && numeroDeMot < nombreMaximumDesMots)
     {
         numeroDeMot++;
     }
 
-    fclose(file);
+    fclose(notreBanqueDemot);
 
-    srand(time(NULL)); // Initialiser le générateur de nombres aléatoires
+    srand(time(NULL)); // l'Initialisation du générateur de nombres aléatoires
     int nombreTotaleDeMot = nbreMot;
 
     printf("%s Vous devriez orthographier correctement ces mots; \n", j[0].nom);

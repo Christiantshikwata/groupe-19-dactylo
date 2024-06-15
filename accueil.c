@@ -14,7 +14,7 @@ void pageDaccueil()
     clock_t start_time=clock();
     clock_t current_time=clock();
 
-    while((double)(current_time-start_time)/CLOCKS_PER_SEC < 1)
+    while((double)(current_time-start_time)/CLOCKS_PER_SEC < 10)
     {
         current_time=clock();
 
@@ -24,7 +24,6 @@ void pageDaccueil()
 }
 void accueilMenu()
 {
-    //calculTemps();
     int nbreMot;
     system("cls");
     enum choix des = demarrer;

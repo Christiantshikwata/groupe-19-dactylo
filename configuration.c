@@ -34,10 +34,6 @@ int modeDaccesAdministrateur()
 
 //dans la procedure ajoutDesMots, elle nous permet d'ajouter des mots dans notre banque de mots
 
-void historique()
-{
-
-}
 
 void ajoutDesMots()
 {

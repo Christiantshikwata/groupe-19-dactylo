@@ -13,6 +13,9 @@ typedef struct listeDeNosMot
 };
 
 
+
+// dans cette fonction on defini un mot de passe pour se connecter
+
 int modeDaccesAdministrateur()
 {
     system("cls");
@@ -27,6 +30,9 @@ int modeDaccesAdministrateur()
     while(mdp!= MotDePasseAdmin);
     return ajoutDesMots();
 }
+
+
+//dans la procedure ajoutDesMots, elle nous permet d'ajouter des mots dans notre banque de mots
 
 void ajoutDesMots()
 {
@@ -46,7 +52,7 @@ void ajoutDesMots()
     do
     {
         system("cls");
-        printf("veuillez saisir les nombres des mots à saisir : \n");
+        printf("veuillez saisir les nombres des mots Ã  saisir : \n");
         scanf("%d",&limitesDesMotAjouter);
         printf("Vous pouvez ajouter %d mots \n",limitesDesMotAjouter);
         printf("=========================== \n");
@@ -65,13 +71,17 @@ void ajoutDesMots()
     fclose(notreBaseDeDonnee);
     accueilMenu();
 }
+
+
+//dans cette procedure nous voyons la description du jeu, nom des concepteur, version et creation
+
 void informationDuJeux()
 {
     int retour;
     printf("=======================================UDBL DACTILOGICIEL========================================\n\n\n"
-           "DESCRIPTION: La saisie rapide au clavier est un grand atout pour les utilisateurs de l’ordinateur.\n"
-           "             Ce projet consiste à proposer un logiciel d’aide à l’amélioration de la saisie rapide au \n"
-           "             clavier communément appelé « Dactylogiciel ». ce jeux impose de règle qui sont les suivantes \n"
+           "DESCRIPTION: La saisie rapide au clavier est un grand atout pour les utilisateurs de lâ€™ordinateur.\n"
+           "             Ce projet consiste Ã  proposer un logiciel dâ€™aide Ã  lâ€™amÃ©lioration de la saisie rapide au \n"
+           "             clavier communÃ©ment appelÃ© Â« Dactylogiciel Â». ce jeux impose de rÃ¨gle qui sont les suivantes \n"
            "             pour gagner il faut ecrire dans le minimum de temps possible autant de mot que possible pour \n"
            "             avoir la victoire sur votre adversaire et gagner le nombre de mot a saisir est predefinie par \n"
            "             les deux premier joueur , les mots doivent etre orthographier correctement \n"

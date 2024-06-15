@@ -36,7 +36,7 @@ int modeDaccesAdministrateur()
 
 void ajoutDesMots()
 {
-    int i;
+    int i ,int rouge;
     char reponse;
     int limitesDesMotAjouter;
     struct listeDeNosMot m;

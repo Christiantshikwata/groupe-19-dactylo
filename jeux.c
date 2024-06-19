@@ -6,12 +6,15 @@
 #define nombreMaximumDesMots 500
 #define tailleMaximumDuMot 40
 
+// on defini une structure pour rÃ©cuperer le nom des joueurs et leur score
 typedef struct joueur
 {
     char nom[50];
     float score;
 };
 
+
+// cette fonction nous permet de remplir notre tableau avec la saisi du joueur en fonction de ce que le programme lui demande de saisir
 int remplissageTableau(int nbreMot, struct joueur j[2])
 {
     char mots[nombreMaximumDesMots][tailleMaximumDuMot];
@@ -31,7 +34,7 @@ int remplissageTableau(int nbreMot, struct joueur j[2])
 
     fclose(notreBanqueDemot);
 
-    srand(time(NULL)); // l'Initialisation du générateur de nombres aléatoires
+    srand(time(NULL)); // l'Initialisation du gÃ©nÃ©rateur de nombres alÃ©atoires
     int nombreTotaleDeMot = nbreMot;
 
     printf("%s Vous devriez orthographier correctement ces mots; \n", j[0].nom);
@@ -51,19 +54,23 @@ int remplissageTableau(int nbreMot, struct joueur j[2])
     return 0;
 }
 
+
+// le lancement du jeu se passe dans cette fonction 
 void demarrageDuJeux(int *nbreMot, struct joueur j[2])
 {
     printf("=============================    bienvenue a vous dans notre jeux demarrer la partie    ==============================\n\n");
     printf("+++++++++++++++++++++++++++++++    saisissez le nombre de mot que vous voudrez       ++++++++++++++++++++++++++++++++++++\n\n");
     scanf("%d", nbreMot);
 
-    printf("saisissez le nom du joueur n°1\n\n");
+    printf("saisissez le nom du joueur nÂ°1\n\n");
     scanf("%s", j[0].nom);
-    printf("saisissez le nom du joueur n°2\n\n");
+    printf("saisissez le nom du joueur nÂ°2\n\n");
     scanf("%s", j[1].nom);
 
 }
 
+
+// et le calcul du temps se fait dans la fonction CalculTemps et aussi on l'Ã©tape de comparaison entre le temps des joueurs pour dire qui a gagnÃ©
 float calculTemps()
 {
     char reponse;

@@ -25,7 +25,7 @@ int modeDaccesAdministrateur()
     {
         printf("veuillez saisir le mot de passe\n");
         scanf("%d",&mdp);
-        system("cls");
+        system("cls"); // le system("cls") permet de nettoyer l'écran pour ne pas avoir trop de messages affiché
     }
     while(mdp!= MotDePasseAdmin);
     return ajoutDesMots();
@@ -68,9 +68,9 @@ void ajoutDesMots()
 }
 
 
-//dans cette procedure nous voyons la description du jeu, nom des concepteur, version et creation
+//dans cette procedure nous voyons les informations relatives au jeu telle que la description du jeu, nom des concepteur, version et creation
 
-void informationDuJeux()
+void informationDuJeux() 
 {
     int retour;
     printf("=======================================UDBL DACTILOGICIEL========================================\n\n\n"
